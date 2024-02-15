@@ -39,8 +39,8 @@ async function getData(url) {
 const pokemonInfo = (data) => {
   console.log("hello world");
   const { id, name, weight, height, stats, sprites, types } = data;
-  pokemonName.innerText = name;
-  pokemonId.innerText = id;
+  pokemonName.innerText = name.toUpperCase();
+  pokemonId.innerText = "#" + id;
   pokemonWeight.innerText = "Weight: " + weight;
   pokemonHeight.innerText = "height: " + height;
   image.src = sprites.front_default;
@@ -58,9 +58,9 @@ const pokemonInfo = (data) => {
   const pokemonTypeName = types.map((obj) => obj["type"].name);
 
   for (let i = 0; i < pokemonTypeName.length; i++) {
-    pokemonType.innerHTML += `<span id="type-${i + 1}">${
-      pokemonTypeName[i]
-    }</span>`;
+    pokemonType.innerHTML += `<span id="type-${i + 1}">${pokemonTypeName[
+      i
+    ].toUpperCase()}</span>&nbsp;`;
   }
 };
 

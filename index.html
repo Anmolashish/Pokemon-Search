@@ -9,24 +9,60 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input id="search-input" required />
-    <button id="search-button">Search</button>
-    <div id="result-div">
-      <p id="pokemon-name"></p>
-      <p id="pokemon-id"></p>
-      <p id="weight"></p>
-      <p id="height"></p>
-      <p id="types"></p>
-      <p id="hp"></p>
-      <p id="attack"></p>
-      <p id="defense"></p>
-      <p id="special-attack"></p>
-      <p id="special-defense"></p>
-      <p id="speed"></p>
-      <img id="sprite" src="" />
-      <p id="types"></p>
-    </div>
+    <h1>Pokémon Search App</h1>
+    <div id="div-shadow">
+      <div id="main-div">
+        <label>Search for Pokémon Name or ID:</label>
+        <div id="input-section">
+          <input id="search-input" required />
+          <button id="search-button">Search</button>
+        </div>
 
+        <div id="image-div">
+          <p><span id="pokemon-name"></span> <span id="pokemon-id"></span></p>
+          <p><small id="weight"></small> <small id="height"></small></p>
+          <p id="height"></p>
+          <img id="sprite" src="" />
+          <p id="types"></p>
+        </div>
+
+        <div id="result-div">
+          <table>
+            <tbody>
+              <tr>
+                <th>Base</th>
+                <th>Stats</th>
+              </tr>
+
+              <tr>
+                <td>HP:</td>
+                <td id="hp"></td>
+              </tr>
+              <tr>
+                <td>Attack:</td>
+                <td id="attack"></td>
+              </tr>
+              <tr>
+                <td>Defense:</td>
+                <td id="defense"></td>
+              </tr>
+              <tr>
+                <td>Sp. Attack:</td>
+                <td id="special-attack"></td>
+              </tr>
+              <tr>
+                <td>Sp. Defense:</td>
+                <td id="special-defense"></td>
+              </tr>
+              <tr>
+                <td>Speed:</td>
+                <td id="speed" class="speed"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <script src="script.js" async defer></script>
   </body>
 </html>
